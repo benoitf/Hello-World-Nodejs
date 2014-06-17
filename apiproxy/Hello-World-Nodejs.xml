@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="Hello-World-Nodejs">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1403023368278</CreatedAt>
+    <CreatedBy>jwest@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>Hello-World-Nodejs</DisplayName>
+    <LastModifiedAt>1403023368278</LastModifiedAt>
+    <LastModifiedBy>jwest@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://hello-world.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
