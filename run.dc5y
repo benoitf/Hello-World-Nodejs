@@ -1,0 +1,14 @@
+FROM codenvy/angular-yeoman
+
+
+VOLUME ["/home/user/application"]
+
+# 1. Update permissions
+# 2. Copy nodejs modules to the application folder
+# 3. Update permissions recursively
+# 4. Makes newly created files accessible for anyone
+# 5. Start application
+CMD sudo chmod a+rw /home/user/application/ && \
+        sudo chmod a+rw -R /home/user/application/ && \
+            umask 0 && \
+                node /home/user/application/apiproxy/resources/node/hello-world.js
